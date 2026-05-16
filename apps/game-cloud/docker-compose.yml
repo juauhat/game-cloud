@@ -32,3 +32,15 @@ volumes:
 
 x-runtipi:
   schema_version: 2
+
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "cloud-game",
+      "image": "cloud-game-local:latest",
+      "isMain": true,
+      "internalPort": 8000
+    }
+  ]
+}
