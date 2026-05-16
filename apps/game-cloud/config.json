@@ -13,4 +13,5 @@
   "website": "https://github.com/giongto35/cloud-game",
   "exposable": true,
   "supported_architectures": ["amd64", "arm64"]
+  "dynamic_config": false
 }
