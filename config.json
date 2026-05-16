@@ -1,0 +1,16 @@
+{
+  "name": "Cloud Game",
+  "id": "cloud-game",
+  "available": true,
+  "short_desc": "Serviço web de cloud gaming para jogos retrô.",
+  "author": "giongto35",
+  "port": 8000,
+  "categories": ["media", "gaming"],
+  "description": "Cloud Game / CloudRetro é um serviço open-source de cloud gaming para jogos retrô via navegador.",
+  "tipi_version": 3,
+  "version": "1.0.0",
+  "source": "https://github.com/giongto35/cloud-game",
+  "website": "https://github.com/giongto35/cloud-game",
+  "exposable": true,
+  "supported_architectures": ["amd64", "arm64"]
+}
