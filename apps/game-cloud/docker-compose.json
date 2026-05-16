@@ -1,12 +1,28 @@
-
 {
   "schemaVersion": 2,
   "services": [
     {
       "name": "cloud-game",
       "image": "cloud-game-local:latest",
+      "command": "bash -c \"./coordinator & ./worker\"",
+      "environment": [
+        "DISPLAY=:99",
+        "MESA_GL_VERSION_OVERRIDE=4.5",
+        "CLOUD_GAME_WEBRTC_SINGLEPORT=8443"
+      ],
+      "volumes": [
+        { "hostPath": "${APP_DATA_DIR}/cores", "containerPath": "/usr/local/share/cloud-game/assets/cores" },
+        { "hostPath": "${APP_DATA_DIR}/games", "containerPath": "/usr/local/share/cloud-game/assets/games" }
+      ],
+      "addPorts": [
+        { "hostPort": 9000, "containerPort": 9000, "tcp": true, "udp": false },
+        { "hostPort": 8443, "containerPort": 8443, "tcp": false, "udp": true }
+      ],
       "isMain": true,
       "internalPort": 8000
     }
-  ]
+  ],
+  "x-runtipi": {
+    "schema_version": 2
+  }
 }
